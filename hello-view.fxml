@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="643.0" prefWidth="746.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="task.lab12.HelloController">
+   <children>
+      <Text fill="#1b1a1a" layoutX="84.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Add Contact">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="25.0" />
+         </font>
+      </Text>
+      <Label layoutX="49.0" layoutY="65.0" text="Name:" />
+      <Label layoutX="22.0" layoutY="107.0" text="Contact number:" />
+      <Label layoutX="50.0" layoutY="150.0" text="Email:" />
+      <TextField fx:id="nameField" layoutX="127.0" layoutY="61.0" promptText="              Name" />
+      <TextField fx:id="contactNumberField" layoutX="127.0" layoutY="103.0" promptText="Example: 03111111111" />
+      <TextField fx:id="emailField" layoutX="126.0" layoutY="146.0" promptText="Example:user@gmail.com" />
+      <Text fill="#1b1a1a" layoutX="34.0" layoutY="281.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Delete Contact">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="25.0" />
+         </font>
+      </Text>
+      <TextField fx:id="deleteContactNumberField" layoutX="126.0" layoutY="315.0" promptText="Example: 03111111111" />
+      <Label layoutX="20.0" layoutY="319.0" text="Contact Number:" />
+      <TableView fx:id="contactTable" layoutX="313.0" layoutY="15.0" prefHeight="603.0" prefWidth="418.0">
+        <columns>
+          <TableColumn fx:id="nameColumn" prefWidth="114.4000244140625" text="Name" />
+          <TableColumn fx:id="contactNumberColumn" prefWidth="124.0" text="Contact Number" />
+            <TableColumn fx:id="emailColumn" prefWidth="178.39999999999998" text="Email Address" />
+        </columns>
+      </TableView>
+      <Button layoutX="111.0" layoutY="201.0" mnemonicParsing="false" onAction="#handleAddButtonAction" prefHeight="26.0" prefWidth="89.0" text="Add" />
+      <Button layoutX="111.0" layoutY="375.0" mnemonicParsing="false" onAction="#handleDeleteButtonAction" prefHeight="26.0" prefWidth="89.0" text="Delete" />
+      <Text fill="#1b1a1a" layoutX="59.0" layoutY="447.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Edit Contact">
+         <font>
+            <Font name="Microsoft YaHei UI Bold" size="25.0" />
+         </font>
+      </Text>
+      <Label layoutX="20.0" layoutY="474.0" text="Contact Number:" />
+      <TextField fx:id="EditContactNumberField" layoutX="127.0" layoutY="470.0" promptText="Example: 03111111111" />
+      <TextField fx:id="EditNameField" layoutX="127.0" layoutY="509.0" promptText="              Name" />
+      <Label layoutX="48.0" layoutY="513.0" text="Name:" />
+      <Label layoutX="50.0" layoutY="554.0" text="Email:" />
+      <TextField fx:id="EditEmailField" layoutX="127.0" layoutY="550.0" promptText="Example:user@gmail.com" />
+      <Button layoutX="111.0" layoutY="594.0" mnemonicParsing="false" onAction="#handleEditButtonAction" prefHeight="26.0" prefWidth="89.0" text="Edit" /></children>
+</AnchorPane>
